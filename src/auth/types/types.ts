@@ -14,9 +14,21 @@ export interface LoginResponse {
     isError: boolean
     loginAt: string | null
     message: string
-    token: {
+    _token: {
         accessToken: string
     },
-    data: LoginUserData
+    data: LoginCredential
 }
 
+
+export interface SignupDataType {
+    userName:string
+    email:string
+    password:string
+    userInfo:{
+        gender:string
+        dob:string
+        profileImage?:object
+    }
+
+}
